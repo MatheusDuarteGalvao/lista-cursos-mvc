@@ -12,11 +12,9 @@ class Home extends Page{
      * @return string
      */
     public static function getHome(){
-        $obOrganization  = new Organization;
-
         //VIEW DA HOME
         $content = View::render('pages/home', [
-            'name' => $obOrganization->name
+            'name' => ''
         ]);
 
         //RETORNA A VIEW DA PÁGINA
