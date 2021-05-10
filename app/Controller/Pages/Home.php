@@ -14,7 +14,8 @@ class Home extends Page{
     public static function getHome(){
         //VIEW DA HOME
         $content = View::render('pages/home', [
-            'name' => ''
+            'name' => 'Recomendação de cursos',
+            'text' => 'Este é um espaço para cadastrar e conhecer novos cursos que possam agregar conhecimento'
         ]);
 
         //RETORNA A VIEW DA PÁGINA

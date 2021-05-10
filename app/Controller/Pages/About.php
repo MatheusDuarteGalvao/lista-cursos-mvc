@@ -15,7 +15,7 @@ class About extends Page{
         //VIEW DA PÁGINA SOBRE
         $content = View::render('pages/about',[
             'name'          => 'Matheus Duarte',
-            'description'   => 'Espaço para cadastro de cursos',
+            'description'   => 'Programador Web desde 2018, sempre em busca do conhecimento, com experiência nas linguagens PHP e JavaScript',
             'site'          => 'https://github.com/MatheusDuarteGalvao'
         ]);
 
