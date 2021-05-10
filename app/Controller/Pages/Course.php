@@ -37,7 +37,7 @@ class Course extends Page{
                 'nome'       => $obCourse->nome,
                 'descricao'  => $obCourse->descricao,
                 'data'       => date('d/m/Y H:i:s' , strtotime($obCourse->data)),
-                'nota'       => $obCourse->data
+                'nota'       => $obCourse->nota
             ]);
         }
 
@@ -74,8 +74,9 @@ class Course extends Page{
         $obCourse = new EntityCourse;
         $obCourse->nome = $postVars['nome'];
         $obCourse->descricao = $postVars['descricao'];
-        $obCourse->usuarios = $postVars['usuario'];
+        $obCourse->usuario = $postVars['descricão'];
         $obCourse->nota = $postVars['nota'];
+
         $obCourse->cadastrar();
 
         //RETORNA A PÁGINA DE LISTAGEM DE DEPOIMENTOS

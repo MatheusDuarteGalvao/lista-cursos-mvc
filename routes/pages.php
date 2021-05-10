@@ -23,3 +23,10 @@ $obRouter->get('/cursos',[
         return new Response(200,Pages\Course::getCourses($request));
     }
 ]);
+
+//ROTA DE CURSOS (INSERT)
+$obRouter->post('/cursos',[
+    function($request){
+        return new Response(200,Pages\Course::insertCourse($request));
+    }
+]);

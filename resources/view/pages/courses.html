@@ -1,7 +1,7 @@
 <h1>Depoimentos</h1>
 <hr>
 
-<section id="testimonies">
+<section id="courses">
 
     {{items}}
 
@@ -18,13 +18,18 @@
     <form method="post" action="?page=1">
 
         <div class="form-group">
-            <label>Nome</label>
+            <label>Nome do curso</label>
             <input type="text" class="form-control" name="nome" required>
         </div>
 
         <div class="form-group">
-            <label>Mensagem</label>
-            <textarea class="form-control" rows="5" name="mensagem" required></textarea>
+            <label>Descrição</label>
+            <textarea class="form-control" rows="5" name="descricao" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Nota para o curso</label>
+            <input type="number" class="form-control" name="nota" min="0" max="5" required>
         </div>
 
         <div class="form-group mt-3">
