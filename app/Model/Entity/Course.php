@@ -91,7 +91,7 @@ class Course{
     }
 
     /**
-     * Método responsável retornar Depoimentos
+     * Método responsável retornar Cursos
      * @param string $where
      * @param string $order
      * @param string $limit

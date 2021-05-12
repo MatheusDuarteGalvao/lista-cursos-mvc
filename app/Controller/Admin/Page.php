@@ -50,9 +50,9 @@ class Page{
         //ITERA OS MÓDULOS
         foreach(self::$modules as $hash=>$module){
             $links .= View::render('admin/menu/link',[
-                'label' => $module['label'],
-                'link'  => $module['link'],
-                'current'   => $hash == $currentModule ? 'text-danger' : ''
+                'label'     => $module['label'],
+                'link'      => $module['link'],
+                'current'   => $hash == $currentModule ? 'text-info' : ''
             ]);
         }
 

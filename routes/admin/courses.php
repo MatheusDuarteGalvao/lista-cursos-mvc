@@ -3,7 +3,7 @@
 use \App\Http\Response;
 use \App\Controller\Admin;
 
-//ROTA LISTAGEM DE DEPOIMENTOS
+//ROTA LISTAGEM DE CURSOS
 $obRouter->get('/admin/courses',[
     'middlewares' => [
         'require-admin-login'
@@ -13,7 +13,7 @@ $obRouter->get('/admin/courses',[
     }
 ]);
 
-//ROTA DE CADASTRO DE UM NOVO DEPOIMENTO
+//ROTA DE CADASTRO DE UM NOVO CURSO
 $obRouter->get('/admin/courses/new',[
     'middlewares' => [
         'require-admin-login'
@@ -23,7 +23,7 @@ $obRouter->get('/admin/courses/new',[
     }
 ]);
 
-//ROTA DE CADASTRO DE UM NOVO DEPOIMENTO (POST)
+//ROTA DE CADASTRO DE UM NOVO CURSO (POST)
 $obRouter->post('/admin/courses/new',[
     'middlewares' => [
         'require-admin-login'
@@ -33,7 +33,7 @@ $obRouter->post('/admin/courses/new',[
     }
 ]);
 
-//ROTA DE EDIÇÃO DE UM DEPOIMENTO
+//ROTA DE EDIÇÃO DE UM CURSO
 $obRouter->get('/admin/courses/{id}/edit',[
     'middlewares' => [
         'require-admin-login'
@@ -43,7 +43,7 @@ $obRouter->get('/admin/courses/{id}/edit',[
     }
 ]);
 
-//ROTA DE EDIÇÃO DE UM DEPOIMENTO (POST)
+//ROTA DE EDIÇÃO DE UM CURSO (POST)
 $obRouter->post('/admin/courses/{id}/edit',[
     'middlewares' => [
         'require-admin-login'
@@ -53,7 +53,7 @@ $obRouter->post('/admin/courses/{id}/edit',[
     }
 ]);
 
-//ROTA DE EXCLUSÃO DE UM DEPOIMENTO
+//ROTA DE EXCLUSÃO DE UM CURSO
 $obRouter->get('/admin/courses/{id}/delete',[
     'middlewares' => [
         'require-admin-login'
@@ -63,7 +63,7 @@ $obRouter->get('/admin/courses/{id}/delete',[
     }
 ]);
 
-//ROTA DE EXCLUSÃO DE UM DEPOIMENTO (POST)
+//ROTA DE EXCLUSÃO DE UM CURSO (POST)
 $obRouter->post('/admin/courses/{id}/delete',[
     'middlewares' => [
         'require-admin-login'

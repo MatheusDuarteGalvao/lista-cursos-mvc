@@ -62,7 +62,7 @@ class Course extends Page{
     }
 
     /**
-     * Método responsável por cadastrar um depoimento
+     * Método responsável por cadastrar um curso
      * @param Request $request
      * @return string
      */
@@ -70,7 +70,7 @@ class Course extends Page{
         //DADOS DO POST
         $postVars = $request->getPostVars();
 
-        //NOVA INSTÂNCIA DE DEPOIMENTO
+        //NOVA INSTÂNCIA DE CURSO
         $obCourse = new EntityCourse;
         $obCourse->nome      = $postVars['nome'];
         $obCourse->descricao = $postVars['descricao'];

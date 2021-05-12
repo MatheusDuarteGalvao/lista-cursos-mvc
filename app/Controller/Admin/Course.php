@@ -59,7 +59,7 @@ class Course extends Page{
         ]);
 
         //RETORNA A PÁGINA COMPLETA
-        return parent::getPanel('Depoimentos > Admin',$content, 'courses');
+        return parent::getPanel('Cursos > Admin',$content, 'courses');
     }
 
     /**
@@ -116,13 +116,13 @@ class Course extends Page{
         //MENSAGENS DE STATUS
         switch ($queryParams['status']) {
             case 'created':
-                return Alert::getSuccess('Depoimento criado com sucesso!');
+                return Alert::getSuccess('Curso criado com sucesso!');
                 break;
             case 'updated':
-                return Alert::getSuccess('Depoimento atualizado com sucesso!');
+                return Alert::getSuccess('Curso atualizado com sucesso!');
                 break;
             case 'deleted':
-                return Alert::getSuccess('Depoimento excluído com sucesso!');
+                return Alert::getSuccess('Curso excluído com sucesso!');
                 break;
         }
     }

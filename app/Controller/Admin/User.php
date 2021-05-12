@@ -15,7 +15,7 @@ class User extends Page{
      * @return string
     */
     private static function getUserItems($request,&$obPagination){
-        //DEPOIMENTOS
+        //CURSOS
         $items = '';
 
         //QUANTIDADE TOTAL DE REGISTROS
@@ -40,7 +40,7 @@ class User extends Page{
             ]);
         }
 
-        //RETORNA OS DEPOIMENTOS
+        //RETORNA OS CURSOS
         return $items;
     }
 
@@ -98,7 +98,7 @@ class User extends Page{
             $request->getRouter()->redirect('/admin/users/new?status=duplicated');
         }
 
-        //NOVA INSTÂNCIA DE DEPOIMENTO
+        //NOVA INSTÂNCIA DE CURSO
         $obUser         = new EntityUser;
         $obUser->nome   = $nome;
         $obUser->email  = $email;
@@ -145,7 +145,7 @@ class User extends Page{
      * @return string
      */
     public static function getEditUser($request,$id){
-        //OBTÉM O DEPOIMENTO DO BANCO DE DADOS
+        //OBTÉM O CURSO DO BANCO DE DADOS
         $obUser = EntityUser::getUserById($id);
 
         //VALIDA A INSTÂNCIA
@@ -172,7 +172,7 @@ class User extends Page{
      * @return string
      */
     public static function setEditUser($request,$id){
-        //OBTÉM O DEPOIMENTO DO BANCO DE DADOS
+        //OBTÉM O CURSO DO BANCO DE DADOS
         $obUser = EntityUser::getUserById($id);
 
         //VALIDA A INSTÂNCIA
@@ -210,7 +210,7 @@ class User extends Page{
      * @return string
      */
     public static function getDeleteUser($request,$id){
-        //OBTÉM O DEPOIMENTO DO BANCO DE DADOS
+        //OBTÉM O CURSO DO BANCO DE DADOS
         $obUser = EntityUser::getUserById($id);
 
         //VALIDA A INSTÂNCIA
@@ -235,7 +235,7 @@ class User extends Page{
      * @return string
      */
     public static function setDeleteUser($request,$id){
-        //OBTÉM O DEPOIMENTO DO BANCO DE DADOS
+        //OBTÉM O CURSO DO BANCO DE DADOS
         $obUser = EntityUser::getUserById($id);
 
         //VALIDA A INSTÂNCIA
@@ -243,7 +243,7 @@ class User extends Page{
             $request->getRouter()->redirect('/admin/users');
         }
 
-        //EXCLUI O DEPOIMENTO
+        //EXCLUI O CURSO
         $obUser->excluir();
 
         //REDIRECIONA O USUÁRIO
