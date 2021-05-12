@@ -47,6 +47,7 @@ class Request{
         $this->router       = $router;
         $this->queryParms   = $_GET ?? [];
         $this->postVars     = $_POST ?? [];
+        $this->fileVars     = $_FILES ?? [];
         $this->headers      = getallheaders();
         $this->httpMethod   = $_SERVER['REQUEST_METHOD'] ?? '';
         $this->setUri();
@@ -113,4 +114,11 @@ class Request{
         return $this->postVars;
     }
 
+    /**
+     * Método responsável por retornar as variáveis FILES da requisição
+     * @return array
+     */
+    public function getFileVars(){
+        return $this->fileVars;
+    }
 }

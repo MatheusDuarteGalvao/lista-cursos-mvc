@@ -54,7 +54,8 @@ class User{
         $this->id = (new Database('usuarios'))->insert([
             'nome'  => $this->nome,
             'email' => $this->email,
-            'senha' => $this->senha
+						'senha' => $this->senha,
+						'foto'	=> $this->foto
         ]);
 
         //SUCESSO
@@ -70,7 +71,8 @@ class User{
         return (new Database('usuarios'))->update('id = '.$this->id,[
             'nome'   => $this->nome,
             'email'  => $this->email,
-            'senha'  => $this->senha
+						'senha'  => $this->senha,
+						'foto'	 => $this->foto,
         ]);
 
         //SUCESSO

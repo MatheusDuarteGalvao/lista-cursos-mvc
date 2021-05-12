@@ -52,11 +52,11 @@ class Course{
 
         //INSERE O CURSO NO BANCO DE DADOS
         $this->id = (new Database('cursos'))->insert([
-            'nome' => $this->nome,
+            'nome'      => $this->nome,
             'descricao' => $this->descricao,
-            'data' => $this->data,
-            'nota' => $this->nota,
-            'usuario' => $this->usuario
+            'data'      => $this->data,
+            'nota'      => $this->nota,
+            'usuario'   => $this->usuario
         ]);
 
         //SUCESSO
@@ -70,11 +70,11 @@ class Course{
     public function atualizar(){
         //ATUALIZA O CURSO NO BANCO DE DADOS
         return (new Database('cursos'))->update('id = '.$this->id,[
-            'nome' => $this->nome,
+            'nome'      => $this->nome,
             'descricao' => $this->descricao,
-            'data' => $this->data,
-            'nota' => $this->nota,
-            'usuario' => $this->usuario
+            'data'      => $this->data,
+            'nota'      => $this->nota,
+            'usuario'   => $this->usuario
         ]);
 
         //SUCESSO
