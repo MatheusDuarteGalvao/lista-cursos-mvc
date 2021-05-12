@@ -9,13 +9,13 @@ use \App\Database\Pagination;
 class Course extends Page{
 
     /**
-     * Método responsável por obter a renderização dos items de depoimentos para a página
+     * Método responsável por obter a renderização dos items de cursos para a página
      * @param Request $request
      * @param Pagination $obPagination
      * @return string
     */
     private static function getCourseItems($request,&$obPagination){
-        //DEPOIMENTOS
+        //CURSOS
         $items = '';
 
         //QUANTIDADE TOTAL DE REGISTROS
@@ -41,17 +41,17 @@ class Course extends Page{
             ]);
         }
 
-        //RETORNA OS DEPOIMENTOS
+        //RETORNA OS CURSOS
         return $items;
     }
 
     /**
-     * Método responsável por retornar o conteúdo (view) de depoimentos 
+     * Método responsável por retornar o conteúdo (view) de cursos 
      * @param Request $request
      * @return string
      */
     public static function getCourses($request){
-        //VIEW DE DEPOIMENTOS
+        //VIEW DE CURSOS
         $content = View::render('pages/courses', [
             'items' => self::getCourseItems($request,$obPagination),
             'pagination' => parent::getPagination($request,$obPagination)
@@ -72,14 +72,14 @@ class Course extends Page{
 
         //NOVA INSTÂNCIA DE DEPOIMENTO
         $obCourse = new EntityCourse;
-        $obCourse->nome = $postVars['nome'];
+        $obCourse->nome      = $postVars['nome'];
         $obCourse->descricao = $postVars['descricao'];
-        $obCourse->usuario = $postVars['descricão'];
-        $obCourse->nota = $postVars['nota'];
+        $obCourse->usuario   = $postVars['descricão'];
+        $obCourse->nota      = $postVars['nota'];
 
         $obCourse->cadastrar();
 
-        //RETORNA A PÁGINA DE LISTAGEM DE DEPOIMENTOS
+        //RETORNA A PÁGINA DE LISTAGEM DE CURSOS
         return self::getCourses($request);
     }
 }

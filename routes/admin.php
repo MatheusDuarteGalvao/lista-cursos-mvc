@@ -1,41 +1,13 @@
 <?php
 
-use \App\Http\Response;
-use \App\Controller\Admin;
+//INCLUI AS ROTAS DE HOME
+include __DIR__.'/admin/home.php';
 
-//ROTA ADMIN
-$obRouter->get('/admin',[
-    function(){
-        return new Response(200,'Admin :)');
-    }
-]);
+//INCLUI AS ROTAS DE LOGIN
+include __DIR__.'/admin/login.php';
 
-//ROTA LOGIN
-$obRouter->get('/admin/login',[
-    'middlewares' => [
-        'require-admin-logout'
-    ],
-    function($request){
-        return new Response(200,Admin\Login::getLogin($request));
-    }
-]);
+//INCLUI AS ROTAS DE CURSOS
+include __DIR__.'/admin/courses.php';
 
-//ROTA LOGIN (POST)
-$obRouter->post('/admin/login',[
-    'middlewares' => [
-        'require-admin-logout'
-    ],
-    function($request){
-        return new Response(200,Admin\Login::setLogin($request));
-    }
-]);
-
-//ROTA DE LOGOUT
-$obRouter->get('/admin/logout',[
-    'middlewares' => [
-        'require-admin-login'
-    ],
-    function($request){
-        return new Response(200,Admin\Login::setLogout($request));
-    }
-]);
+//INCLUI AS ROTAS DE USUÁRIOS
+include __DIR__.'/admin/users.php';
