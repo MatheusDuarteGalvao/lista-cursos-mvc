@@ -1,9 +1,12 @@
 <div class="d-flex justify-content-center">
 
-    <div class="card mt-3 text-dark text-center" style="width: 500px;">
+    <div class="card mt-3 text-dark" style="width: 500px;">
 
-        <div class="card-header">
+        <div class="card-header d-flex justify-content-between">
             <h1>Login</h1>
+            <a href="{{URL}}">
+                <button type="button" class="btn btn-warning">Voltar</button>
+            </a>
         </div>
 
         <div class="card-body">
@@ -19,10 +22,10 @@
 
                 <div class="form-group my-3">
                     <label>Senha</label>
-                    <input type="password" class="form-control" name="senha" placeholder="******" required autofocus>
+                    <input type="password" class="form-control" name="senha" placeholder="******" required>
                 </div>
 
-                <button type="submit" class="btn btn-lg btn-danger">Entrar</button>
+                <button type="submit" class="btn btn-lg btn-info text-light">Entrar</button>
             </form>
 
         </div>

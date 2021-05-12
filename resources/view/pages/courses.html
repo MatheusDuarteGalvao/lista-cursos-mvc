@@ -18,6 +18,11 @@
     <form method="post" action="?page=1">
 
         <div class="form-group">
+            <label>Seu nome</label>
+            <input type="text" class="form-control" name="usuario" required>
+        </div>
+
+        <div class="form-group">
             <label>Nome do curso</label>
             <input type="text" class="form-control" name="nome" required>
         </div>
@@ -28,8 +33,14 @@
         </div>
 
         <div class="form-group">
-            <label>Nota para o curso</label>
-            <input type="number" class="form-control" name="nota" min="0" max="5" required>
+            <label for="nota">Nota para o curso</label>
+            <select class="form-control" id="nota" name="nota" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
 
         <div class="form-group mt-3">

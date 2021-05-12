@@ -71,10 +71,10 @@ class Course extends Page{
         $postVars = $request->getPostVars();
 
         //NOVA INSTÂNCIA DE CURSO
-        $obCourse = new EntityCourse;
+        $obCourse            = new EntityCourse;
         $obCourse->nome      = $postVars['nome'];
         $obCourse->descricao = $postVars['descricao'];
-        $obCourse->usuario   = $postVars['descricão'];
+        $obCourse->usuario   = $postVars['usuario'];
         $obCourse->nota      = $postVars['nota'];
 
         $obCourse->cadastrar();
