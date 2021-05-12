@@ -3,6 +3,7 @@
 namespace App\Utils;
 
 class Upload{
+
 	/**
 	 * Nome do arquivo (sem extensão)
 	 * @var string
@@ -105,7 +106,7 @@ class Upload{
 
 		//VERIFICAR DUPLICAÇÃO
 		if(!file_exists($dir.'/'.$basename)){
-		return $basename;
+			return $basename;
 		}
 
 		//INCREMENTAR DUPLICAÇÕES
