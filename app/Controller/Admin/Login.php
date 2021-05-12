@@ -16,7 +16,7 @@ class Login extends Page{
      */
     public static function getLogin($request,$errorMessage = null){
         //STATUS
-        $status = !is_null($errorMessage) ? View::render('admin/login/status',[
+        $status = !is_null($errorMessage) ? View::render('admin/alert/status',[
             'mensagem' => $errorMessage
         ]) : '';
 
