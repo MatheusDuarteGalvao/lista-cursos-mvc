@@ -37,7 +37,7 @@ class Course extends Page{
                 'id'         => $obCourse->id,
                 'nome'       => $obCourse->nome,
                 'descricao'  => $obCourse->descricao,
-                'data'       => date('d/m/Y H:i:s' , strtotime($obCourse->data))
+                'nota'       => $obCourse->nota
             ]);
         }
 
@@ -92,9 +92,11 @@ class Course extends Page{
         $postVars = $request->getPostVars();
 
         //NOVA INSTÂNCIA DE CURSO
-        $obCourse = new EntityCourse;
-        $obCourse->nome = $postVars['nome'] ?? '';
+        $obCourse            = new EntityCourse;
+        $obCourse->nome      = $postVars['nome'] ?? '';
         $obCourse->descricao = $postVars['descricao'] ?? '';
+        $obCourse->nota      = $postVars['nota'] ?? '';
+        $obCourse->usuario   = $postVars['usuario'] ?? '';
         $obCourse->cadastrar();
 
         //REDIRECIONA O USUÁRIO
@@ -175,8 +177,8 @@ class Course extends Page{
         $postVars = $request->getPostVars();
 
         //ATUALIZA A INSTÂNCIA
-        $obCourse->nome      = $postVars['nome'] ?? $obCourse->nome;
-        $obCourse->descricao  = $postVars['descricao'] ?? $obCourse->descricao;
+        $obCourse->nome         = $postVars['nome'] ?? $obCourse->nome;
+        $obCourse->descricao    = $postVars['descricao'] ?? $obCourse->descricao;
         $obCourse->atualizar();
 
         //REDIRECIONA O USUÁRIO
