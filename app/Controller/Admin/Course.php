@@ -26,7 +26,7 @@ class Course extends Page{
 		$paginaAtual = $queryParams['page'] ?? 1;
 
 		//INSTÂNCIA DE PAGINAÇÃO
-		$obPagination = new Pagination($quantidadeTotal,$paginaAtual,5);
+		$obPagination = new Pagination($quantidadeTotal,$paginaAtual,2);
 
 		//RESULTADOS DA PÁGINA
 		$results = EntityCourse::getCourses(null,'id DESC',$obPagination->getLimit());
