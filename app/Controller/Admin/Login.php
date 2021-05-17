@@ -26,7 +26,7 @@ class Login extends Page{
 			'status' => $status
 		]);
 
-		return parent::getPage('Login > WDEV',$content);
+		return parent::getPage('Login > Admin',$content);
 	}
 
 	/**
